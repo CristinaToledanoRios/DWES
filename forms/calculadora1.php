@@ -16,10 +16,10 @@
 			
 			<?php
 			require "limpiar.php";
-			if($_SERVER["REQUEST_METHOD"]=="POST" {
+			if($_SERVER["REQUEST_METHOD"]=="POST") {
 				
-				$operando1=$_POST['Operando1'];
-				$operando2=$_POST['Operando2'];
+				$operando1=$_POST['operando1'];
+				$operando2=$_POST['operando2'];
 				$operacion=$_POST['operacion'];
 					
 		switch ($operacion) {
