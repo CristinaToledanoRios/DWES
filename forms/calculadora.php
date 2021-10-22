@@ -1,24 +1,32 @@
-<HTML>
-<HEAD>
-</HEAD>
-<BODY>
 <?php
 
-$Operacion=$_GET['Operacion'];
-$Operando1=$_GET['Operando1'];
-$Operando2=$_GET['Operando2'];
-if ($Operacion=='Suma'){
-	echo 'Resultado Operacion: ',$Operando1,' + ',$Operando2,' = ',$Operando1+$Operando2;
-}
-else if($Operacion=='Resta'){
-	echo 'Resultado Operacion: ',$Operando1,' - ',$Operando2,' = ',$Operando1-$Operando2;
-}
-else if($Operacion=='Producto'){
-	echo 'Resultado Operacion: ',$Operando1,' x ',$Operando2,' = ',$Operando1*$Operando2;
-}
-else if($Operacion=='Division'){
-	echo 'Resultado Operacion: ',$Operando1,' / ',$Operando2,' = ',$Operando1/$Operando2;
-}
+	$operando1 =  $_POST['operando1'];
+	$operando2 =  $_POST['operando2'];
+	$operacion =  $_POST['operacion'];
+	calculadora($operando1, $operando2, $operacion);
+	
+	function calculadora($operando1, $operando2, $operacion) {
+		switch ($operacion) {
+			case 'Suma':
+				$suma=$operando1+$operando2;
+				echo "Resultado operacion: $operando1 + $operando2 = ".$suma;
+				break;
+			case 'Resta':
+				$resta=$operando1-$operando2;
+				echo "Resultado operacion: $operando1 - $operando2 = ".$resta;
+				break;
+			case 'Producto':
+				$producto=$operando1*$operando2;
+				echo "Resultado operacion: $operando1 X $operando2 = ".$producto;
+				break;
+			case 'Division':
+				$division=$operando1/$operando2;
+				echo "Resultado operacion: $operando1 : $operando2 = ".$division;
+				break;
+			default:
+				echo "Introduce un valor válido";
+				break;
+		}
+	}
+	
 ?>
-</BODY>	 
-</HTML>	
