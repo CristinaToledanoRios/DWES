@@ -15,7 +15,7 @@
 			<input type="reset" value="borrar"><br><br>
 			
 			<?php
-			require "limpiar.php";
+			require "validar.php";
 			if($_SERVER["REQUEST_METHOD"]=="POST") {
 				
 				$operando1=$_POST['operando1'];
