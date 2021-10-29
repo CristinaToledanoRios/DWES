@@ -40,12 +40,11 @@ echo "Se ha introducido el alumno";
 function fechaValidada ($fecha) {
 
 	$fechacomprobada=true;
-	$separador = "/";
-	$fechaSeparada = explode($separador, $fecha);
+	$fechaSeparada = explode("/", $fecha);
 
 
-	if (count($fechaSeparada)==3 && checkdate($fechaSeparada[1], $fechaSeparada[0], $fechaSeparada[2])) { //con el count se verifica que hay tres campos (dia/mes/año).
-																										//el checkdate tiene formato mes/dia/año. Si el usuario de España mete dia, mes año, la comprobacion hay que hacerla poniendo primero el mes, o sea, lo que en el array español ocuparia la posicion 1.
+	if (count($fechaSeparada)==3 && checkdate($fechaSeparada[1], $fechaSeparada[0], $fechaSeparada[2])) { 
+																										
 		 $fechacomprobada=true;
  
 	} else {
